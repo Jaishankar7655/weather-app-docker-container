@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+/* Container above dots (Search Box) */
+.container {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(145deg, rgba(25, 25, 112, 0.9), rgba(0, 0, 139, 0.9)); /* midnight blue → dark blue */
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* Dots layer */
+.dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Top NavBar Header */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background:linear-gradient(145deg, rgba(25, 25, 112, 0.9), rgba(0, 0, 139, 0.9)); /* same as .container */;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Main content */
+main {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+input, button {
+    padding: 12px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background: #2193b0;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #176d7a;
+}
+
+/* Weather result box */
+#result {
+    margin-top: 20px;
+    background: linear-gradient(145deg, rgba(25, 25, 112, 0.9), rgba(0, 0, 139, 0.9)); /* same as .container */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+}
+
+
+
+
+/* 🌍 RESPONSIVENESS */
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+    .app-header {
+        font-size: 18px;
+        height: 50px;
+    }
+
+    input, button {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .app-header {
+        font-size: 22px;
+    }
+
+    input, button {
+        width: 70%;
+        font-size: 15px;
+    }
+}
+
+/* Large devices (laptops & desktops) */
+@media (min-width: 1025px) {
+    .content {
+        max-width: 600px;
+    }
+}
