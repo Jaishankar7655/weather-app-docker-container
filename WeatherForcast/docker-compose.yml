@@ -1,0 +1,19 @@
+services:
+  spring:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: weatherforecast-spring
+    ports:
+      - "8080:8080"
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: weatherforecast-nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - spring
+
